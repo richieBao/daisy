@@ -169,6 +169,7 @@ class Optimizer:
         self.generator = np.random.default_rng(seed)
         #print(f"{self.__module__}.{self.__class__.__name__}")
         self.logger = Logger(self.problem.log_to, log_file=self.problem.log_file).create_logger(name=f"{self.__module__}.{self.__class__.__name__}")
+        # print("++++++",self.logger)
         self.logger.info(self.problem.msg)
         self.history = History(log_to=self.problem.log_to, log_file=self.problem.log_file)
         self.pop, self.g_best, self.g_worst = None, None, None
@@ -245,7 +246,7 @@ class Optimizer:
         processData_pop={}
         processData_indices={}
         processData_weight={}
-        
+        processData_globalBestFitness={}
         # self.pop_sorted=self.pop
         
 
@@ -268,6 +269,7 @@ class Optimizer:
             processData_pop[epoch]=self.pop
             processData_indices[epoch]=self.indices
             processData_weight[epoch]=self.processData_epoch["weightEpoch"]
+            processData_globalBestFitness[epoch]=self.history.list_global_best[-1].target.fitness
             
             if self.check_termination("end", None, epoch):
                 break
@@ -275,6 +277,8 @@ class Optimizer:
         processData_dict["pop"]=processData_pop
         processData_dict["order_indices"]=processData_indices
         processData_dict["weightEpoch"]=processData_weight
+        processData_dict["processDataGBestFitness"]=processData_globalBestFitness
+        
         
         with open(self.pickle_fn,'wb') as f:
             pickle.dump(processData_dict,f)
@@ -308,6 +312,7 @@ class Optimizer:
         self.logger.info(f">>>Problem: {self.problem.name}, Epoch: {epoch}, Current_best: {self.history.list_current_best[-1].target.fitness}, "
                          f"Global_best: {self.history.list_global_best[-1].target.fitness}, Runtime: {runtime:.5f} seconds")
         #return loggerInfo
+        
         
 
     def track_optimize_process(self) -> None:

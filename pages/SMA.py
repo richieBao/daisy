@@ -633,7 +633,9 @@ def SMA_procedure(epoch,minmax,p_t,simulating): # ,interval    popsize,
         # print(model.pickle_fn)
         g_best = model.solve(problem_dict)
         
-        # model=SMA_solve.DevSMA(epoch=epoch, pop_size=popsize, p_t = p_t,starting_solutions=points)  
+        # model=SMA_solve.DevSMA(epoch=epoch, pop_size=popsize, p_t = p_t,starting_solutions=points)
+        # print("@@@",model.logger.log_to)
+        # print("+++",model.logger.log_file)
         
         
         result=f"Solution: {g_best.solution}, Fitness: {g_best.target.fitness}"
@@ -667,34 +669,47 @@ def SMA_procedure(epoch,minmax,p_t,simulating): # ,interval    popsize,
     )
 def SMA_analysis_globalBest(SMAAnalysis):
     if  SMAAnalysis>0:
-        try:
-            log_file=problem_dict["log_file"]
-        except:
-            log_file='loggerfile/logger_SMA.log'
-        parsed_entries = []
-        # print(log_file)
-        with open(log_file,'r') as f:
-            for line in f:
-                match=re.search(r'>>>(.*)',line)
-                # print(line)
-                # print(match)
-                if match:
-                    key_value_str = match.group(1).strip()
-                    # print(key_value_str)
-                    pairs = [kv.strip() for kv in key_value_str.split(',')]
-                    # print(pairs)                    
-                    key_value_dict = {k.strip(): v.strip() for k, v in (kv.split(':') for kv in pairs)}
-                    parsed_entries.append(key_value_dict)
+        with open(PICKLE_FN,'rb') as f:
+            processData_dict=pickle.load(f)
         
-        # print(parsed_entries)
-        log_df=pd.DataFrame(parsed_entries)
-        log_df=log_df.astype({"Epoch":int,"Current_best":float,"Global_best":float})
-        # print(log_df,log_df.dtypes)
+        global_best=processData_dict["processDataGBestFitness"]
+        global_best={str(k):float(v) for k,v in global_best.items()}
+        
+        # print(global_best)
+        # try:
+        #     log_file=problem_dict["log_file"]
+        # except:
+        #     log_file='loggerfile/logger_SMA.log'
+        # parsed_entries = []
+        # # print(log_file)
+        # with open(log_file,'r') as f:
+        #     for line in f:
+        #         match=re.search(r'>>>(.*)',line)
+        #         # print(line)
+        #         # print(match)
+        #         if match:
+        #             key_value_str = match.group(1).strip()
+        #             # print(key_value_str)
+        #             pairs = [kv.strip() for kv in key_value_str.split(',')]
+        #             # print(pairs)                    
+        #             key_value_dict = {k.strip(): v.strip() for k, v in (kv.split(':') for kv in pairs)}
+        #             parsed_entries.append(key_value_dict)
+        
+        # # print(parsed_entries)
+        # global_best_df=pd.DataFrame(global_best)
+        global_best_df=pd.DataFrame(list(global_best.items()), columns=['Epoch', 'Global_best'])
+        # print(global_best_df)
+            
+        # log_df=log_df.astype({"Epoch":int,"Current_best":float,"Global_best":float})
+        # # print(log_df,log_df.dtypes)
+        
+        
+        
         fig = px.line(
-            log_df,
+            global_best_df,
             x="Epoch",
             y="Global_best",#["Current best","Global best"],
-            # title="Epoch - Global best",
+        #     # title="Epoch - Global best",
         )
         # # fig.update_traces(mode="markers+lines", hovertemplate=None)
         # fig.update_layout(

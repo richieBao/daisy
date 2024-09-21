@@ -39,6 +39,7 @@ class Logger:
                 formatter = logging.Formatter(format_str, datefmt="%Y/%m/%d %I:%M:%S %p")
             if self.log_file is None:
                 self.log_file = self.default_logfile
+            # print("++++++",self.log_file)
             handler = logging.FileHandler(self.log_file,mode='w')
             handler.setFormatter(formatter)
         else:

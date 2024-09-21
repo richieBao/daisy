@@ -694,12 +694,19 @@ def SMA_analysis_globalBest(SMAAnalysis):
             log_df,
             x="Epoch",
             y="Global_best",#["Current best","Global best"],
-            title="Epoch - Global best",
+            # title="Epoch - Global best",
         )
         # # fig.update_traces(mode="markers+lines", hovertemplate=None)
         # fig.update_layout(
         #         margin=dict(t=50, l=25, r=25, b=25), yaxis_title="best", xaxis_title="Epoch"
         #     )
+        # Update layout
+        fig.update_layout(
+            title="Epoch - Global best",
+            xaxis_title='Epoch',
+            yaxis_title='Global best',
+            hovermode="x unified"
+        ) 
         
 
         

@@ -688,12 +688,12 @@ def SMA_analysis_globalBest(SMAAnalysis):
         
         # print(parsed_entries)
         log_df=pd.DataFrame(parsed_entries)
-        log_df=log_df.astype({"Epoch":int,"Current best":float,"Global best":float})
+        log_df=log_df.astype({"Epoch":int,"Current_best":float,"Global_best":float})
         # print(log_df,log_df.dtypes)
         fig = px.line(
             log_df,
             x="Epoch",
-            y="Global best",#["Current best","Global best"],
+            y="Global_best",#["Current best","Global best"],
             title="Epoch - Global best",
         )
         # # fig.update_traces(mode="markers+lines", hovertemplate=None)

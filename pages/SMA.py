@@ -667,7 +667,10 @@ def SMA_procedure(epoch,minmax,p_t,simulating): # ,interval    popsize,
     )
 def SMA_analysis_globalBest(SMAAnalysis):
     if  SMAAnalysis>0:
-        log_file=problem_dict["log_file"]
+        try:
+            log_file=problem_dict["log_file"]
+        except:
+            log_file='loggerfile/logger_SMA.log'
         parsed_entries = []
         # print(log_file)
         with open(log_file,'r') as f:
@@ -940,6 +943,8 @@ def graph_solutionPts_update(weights_update):
     prevent_initial_call=True,
     )    
 def graph_weightsLog_update(epoch4weightLog,bt_weightsLog):  
+    if  bt_weightsLog==0:
+        raise PreventUpdate
     if bt_weightsLog>0:        
         with open(PICKLE_FN,'rb') as f:
             processData_dict=pickle.load(f)
@@ -952,7 +957,7 @@ def graph_weightsLog_update(epoch4weightLog,bt_weightsLog):
         Sis=chosen_weights_info["Si"]
         
         # print(chosen_weights_info)
-        x=np.linspace(-1, 3, 100)
+        x=np.linspace(0, 10, 100)
         base=10
         y=np.log(x+1)/np.log(base)
         

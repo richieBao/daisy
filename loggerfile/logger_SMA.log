@@ -1,0 +1,21 @@
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: Solving single objective optimization problem.
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 1, Current best: 34.367224800817674, Global best: 34.367224800817674, Runtime: 0.00137 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 2, Current best: 25.3694354335348, Global best: 25.3694354335348, Runtime: 0.00068 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 3, Current best: 17.915048504682545, Global best: 17.915048504682545, Runtime: 0.00052 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 4, Current best: 17.915048504682545, Global best: 17.915048504682545, Runtime: 0.00051 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 5, Current best: 15.713440940568434, Global best: 15.713440940568434, Runtime: 0.00054 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 6, Current best: 14.96818282192584, Global best: 14.96818282192584, Runtime: 0.00051 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 7, Current best: 8.293185457931123, Global best: 8.293185457931123, Runtime: 0.00052 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 8, Current best: 5.790928178471105, Global best: 5.790928178471105, Runtime: 0.00051 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 9, Current best: 2.833627735488811, Global best: 2.833627735488811, Runtime: 0.00051 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 10, Current best: 0.9255399543402928, Global best: 0.9255399543402928, Runtime: 0.00052 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 11, Current best: 0.9255399543402928, Global best: 0.9255399543402928, Runtime: 0.00053 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 12, Current best: 0.9255399543402928, Global best: 0.9255399543402928, Runtime: 0.00054 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 13, Current best: 0.9255399543402928, Global best: 0.9255399543402928, Runtime: 0.00062 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 14, Current best: 0.8685418371792966, Global best: 0.8685418371792966, Runtime: 0.00077 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 15, Current best: 0.8685418371792966, Global best: 0.8685418371792966, Runtime: 0.00074 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 16, Current best: 0.8685418371792966, Global best: 0.8685418371792966, Runtime: 0.00077 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 17, Current best: 0.6626128481796613, Global best: 0.6626128481796613, Runtime: 0.00112 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 18, Current best: 0.6626128481796613, Global best: 0.6626128481796613, Runtime: 0.00101 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 19, Current best: 0.6626128481796613, Global best: 0.6626128481796613, Runtime: 0.00088 seconds
+2024/09/21 11:38:17 AM, INFO, algorithms.heuristicAlgorithm.bio_based.SMA.DevSMA: >>>Problem: P, Epoch: 20, Current best: 0.6626128481796613, Global best: 0.6626128481796613, Runtime: 0.00086 seconds

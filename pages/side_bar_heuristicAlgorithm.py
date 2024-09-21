@@ -2,12 +2,12 @@ from dash import html
 import dash_bootstrap_components as dbc
 
 path_pagename_map = {
-    "/about/topic-1": "Topic 1",
-    "/about/topic-2": "Topic 2",
-    "/about/topic-3": "Topic 3"
+    "/meta_heuristic/SMA": "SMA",
+    # "/meta_heuristic/topic-2": "Topic 2",
+    # "/meta_heuristic/topic-3": "Topic 3"
 }
 
-def sidebar():
+def sidebar_heuristicAlgorithm():
     return html.Div(
         dbc.Nav(
             [
